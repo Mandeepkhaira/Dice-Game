@@ -38,20 +38,22 @@ public class MainActivity extends AppCompatActivity {
             {
                 int bound=6;
                 Random rand = new Random();
-                int UserDice = rand.nextInt(bound);
-                int ComputerDice = rand.nextInt(bound);
+                int UDice = rand.nextInt(bound);
+                int CDice = rand.nextInt(bound);
 
-                UserDice.setImageResource(diceArray[UserDice]);
-                ComputerDice.setImageResource(diceArray[ComputerDice]);
-                if(UserDice>ComputerDice)
+                UserDice.setImageResource(diceArray[UDice]);
+                ComputerDice.setImageResource(diceArray[CDice]);
+                if(UDice>CDice)
                 {
                     Display.setText("User Win");
                 }
-                else
+                else if(UDice<CDice)
                 {
                     Display.setText("User Lost");
                 }
-                Display.setText("There is a tie");
+                else {
+                    Display.setText("It is a tie");
+                }
             }
         });
 
@@ -61,23 +63,25 @@ public class MainActivity extends AppCompatActivity {
             {
                 int bound=6;
                 Random rand = new Random();
-                int UserDice = rand.nextInt(bound);
-                int ComputerDice = rand.nextInt(bound);
+                int UDice = rand.nextInt(bound);
+                int CDice = rand.nextInt(bound);
 
-                UserDice.setImageResource(diceArray[UserDice]);
-               ComputerDice.setImageResource(diceArray[UserDice]);
+                UserDice.setImageResource(diceArray[UDice]);
+               ComputerDice.setImageResource(diceArray[CDice]);
 
-                if(UserDice<ComputerDice)
+                if(UDice<CDice)
                 {
                     Display.setText("User Win");
                 }
-                else
+                else if(UDice>CDice)
                 {
-                    Display.setText("Computer Lost");
+                    Display.setText("Computer is winner");
                 }
+                else {
 
 
-                Display.setText("There is a tie");
+                    Display.setText("There is a tie");
+                }
 
 
             }

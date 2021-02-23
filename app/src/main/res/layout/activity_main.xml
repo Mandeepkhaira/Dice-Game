@@ -89,7 +89,6 @@
                 android:background="#3F51B5"
                 android:contentDescription="@string/DisplayText"
                 android:gravity="center"
-                android:text="@string/display"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
